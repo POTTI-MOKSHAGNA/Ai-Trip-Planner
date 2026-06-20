@@ -59,6 +59,11 @@ function SignUp() {
                 <p className="signup-subtitle">
                     Create an account to start planning your journeys.
                 </p>
+                {error && (
+                    <div className="error-banner" role="alert">
+                        {error}
+                    </div>  
+                )}
 
                 <form className="signup-form">
                     <div className="signup-field">
@@ -112,7 +117,7 @@ function SignUp() {
                     </div>
 
                     <button type="submit" className="signup-button">
-                        Sign Up
+                        {loading ? 'Creating Account...' : 'Sign Up'}
                     </button>
 
                     <p className="signup-footer">
