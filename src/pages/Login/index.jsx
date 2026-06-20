@@ -11,7 +11,7 @@ function Login() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     const {login} = useAuth();
-    const token = Cookies.get('token');
+    const token = Cookies.get('jwt_token');
     useEffect(() => {
         if (token) {
             navigate('/', { replace: true });

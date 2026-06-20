@@ -1,6 +1,6 @@
 import { useState , useEffect } from "react";
 import { useNavigate , Link } from "react-router-dom";
-import Cookie from "js-cookie";
+import Cookies from "js-cookie";
 import {useAuth } from '../../context/AuthContext'
 import "./index.css";
 
@@ -65,7 +65,7 @@ function SignUp() {
                     </div>  
                 )}
 
-                <form className="signup-form">
+                <form className="signup-form" onSubmit={handleSignUp}>
                     <div className="signup-field">
                         <label htmlFor="email" className="signup-label">
                             Email
@@ -116,7 +116,7 @@ function SignUp() {
                         />
                     </div>
 
-                    <button type="submit" className="signup-button">
+                    <button type="submit" className="signup-button" disabled={loading}>
                         {loading ? 'Creating Account...' : 'Sign Up'}
                     </button>
 

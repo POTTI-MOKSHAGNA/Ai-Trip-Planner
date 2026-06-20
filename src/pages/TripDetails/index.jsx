@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 
 const TripDetails = () => {
   const { id } = useParams();
@@ -33,8 +33,7 @@ const TripDetails = () => {
   const [expDesc, setExpDesc] = useState('');
   const [expDate, setExpDate] = useState('');
 
-  const API_URL = process.env.REACT_APP_API_URL || 
-    (process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api');
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
   // Fetch Trip Details
   const fetchTrip = useCallback(async () => {

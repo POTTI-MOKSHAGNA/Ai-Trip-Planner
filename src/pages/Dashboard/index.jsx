@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { 
   FiLogOut, 
   FiPlus, 
@@ -34,8 +34,7 @@ const Dashboard = () => {
   // Interest options
   const interestOptions = ['Food', 'Culture', 'Adventure', 'Shopping', 'Nature'];
 
-  const API_URL = process.env.REACT_APP_API_URL || 
-    (process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api');
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
   // Fetch all trips for user
   const fetchTrips = useCallback(async () => {
