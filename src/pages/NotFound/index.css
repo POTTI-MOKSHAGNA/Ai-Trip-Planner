@@ -1,0 +1,53 @@
+.not-found-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background-color: #f8fafc;
+}
+
+.not-found-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 48px 32px;
+}
+
+.not-found-code {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #2563eb;
+    line-height: 1;
+}
+
+.not-found-text {
+    margin: 16px 0 12px;
+    font-size: 1.75rem;
+    color: #111827;
+}
+
+.not-found-desc {
+    margin: 0 auto 24px;
+    max-width: 320px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-back:hover {
+    background-color: #1d4ed8;
+}
