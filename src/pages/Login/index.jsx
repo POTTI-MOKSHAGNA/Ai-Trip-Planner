@@ -1,10 +1,41 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import './index.css';
+import React, { useState , useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import Cookies from 'js-cookie';
+import { useAuth } from '../../context/AuthContext';
+import "./index.css";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const {login} = useAuth();
+    const token = Cookies.get('token');
+    useEffect(() => {
+        if (token) {
+            navigate('/', { replace: true });
+        }
+    }, [token, navigate]);
+
+    const handleSignIn = async (e) => {
+        e.preventDefault();
+
+        setError("");
+        setLoading(true);
+
+        // Authentication logic will come later
+        const result = await login(email, password);
+
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000);
+        if (result.success) {
+            navigate('/');
+        } else {
+            setError(result.error);
+        }
+    };
 
     return (
         <div className="login-page">
@@ -14,7 +45,13 @@ function Login() {
                     Sign in to access your personalized travel dashboard.
                 </p>
 
-                <form className="login-form">
+                <form className="login-form" onSubmit={handleSignIn}>
+                    {error && (
+                        <div className="error-message">
+                            {error}
+                        </div>
+                    )}
+
                     <div className="form-group">
                         <label htmlFor="email" className="form-label">
                             Email
@@ -45,8 +82,12 @@ function Login() {
                         />
                     </div>
 
-                    <button type="submit" className="login-button">
-                        Sign In
+                    <button
+                        type="submit"
+                        className="login-button"
+                        disabled={loading}
+                    >
+                        {loading ? "Signing In..." : "Sign In"}
                     </button>
 
                     <p className="login-footer">

@@ -1,11 +1,55 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState , useEffect } from "react";
+import { useNavigate , Link } from "react-router-dom";
+import Cookie from "js-cookie";
+import {useAuth } from '../../context/AuthContext'
 import "./index.css";
 
 function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const { register } = useAuth();
+    const navigate = useNavigate();
+
+    const token = Cookies.get('jwt_token');
+    useEffect(() => {
+        if (token) {
+        navigate('/', { replace: true });
+        }
+    }, [token, navigate]);
+
+    const handleSignUp = async (e) => {
+        e.preventDefault();
+        setError('');
+
+        if (!email || !password || !confirmPassword) {
+        setError('Please fill in all fields.');
+        return;
+        }
+
+        if (password !== confirmPassword) {
+        setError('Passwords do not match.');
+        return;
+        }
+
+        if (password.length < 6) {
+        setError('Password must be at least 6 characters long.');
+        return;
+        }
+
+        setLoading(true);
+        const result = await register(email, password);
+        setLoading(false);
+
+        if (result.success) {
+            navigate('/');
+        } else {
+            setError(result.error);
+        }
+    };
+
 
     return (
         <div className="signup-page">

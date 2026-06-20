@@ -1,0 +1,33 @@
+.navbar {
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    color: #111827;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.navbar-logout-btn {
+    padding: 10px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.navbar-logout-btn:hover {
+    background-color: #f3f4f6;
+}

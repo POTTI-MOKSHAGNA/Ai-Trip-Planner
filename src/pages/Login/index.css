@@ -85,3 +85,10 @@
 .login-link:hover {
     text-decoration: underline;
 }
+.error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
