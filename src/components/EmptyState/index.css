@@ -1,0 +1,49 @@
+.empty-state {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.empty-state-title {
+    margin-bottom: 12px;
+    color: #111827;
+    font-size: 1.8rem;
+}
+
+.empty-state-description {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.empty-state-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.empty-state-button:hover {
+    background-color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+    .empty-state {
+        padding: 40px 24px;
+    }
+
+    .empty-state-title {
+        font-size: 1.5rem;
+    }
+}

@@ -26,10 +26,7 @@ function Login() {
 
         // Authentication logic will come later
         const result = await login(email, password);
-
-        setTimeout(() => {
-            setLoading(false);
-        }, 1000);
+        setLoading(false);
         if (result.success) {
             navigate('/');
         } else {

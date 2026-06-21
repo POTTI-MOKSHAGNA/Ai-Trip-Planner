@@ -1,0 +1,39 @@
+.dashboard-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.dashboard-header-content {
+    flex: 1;
+}
+
+.dashboard-title {
+    margin: 0 0 8px;
+    font-size: 2rem;
+    color: #111827;
+}
+
+.dashboard-subtitle {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.create-trip-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.create-trip-btn:hover {
+    background-color: #1d4ed8;
+}

@@ -1,0 +1,124 @@
+.trip-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: 0.2s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-2px);
+}
+
+.trip-card-header {
+    background: #2563eb;
+    color: white;
+    padding: 24px;
+    min-height: 140px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.budget-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.budget-low {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.budget-medium {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.budget-high {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.trip-destination {
+    margin: 0 0 8px;
+    color: white;
+}
+
+.trip-duration {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.trip-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.trip-section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.trip-interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.trip-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.trip-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+}
+
+.cost-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.cost-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #059669;
+}
+
+.delete-btn {
+    padding: 8px 12px;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    background: white;
+    color: #ef4444;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #fef2f2;
+}
