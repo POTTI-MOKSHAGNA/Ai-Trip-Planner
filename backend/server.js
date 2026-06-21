@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
-
+console.log(process.env.MONGODB_URI);
 const authRoutes = require('./routes/auth');
 const tripRoutes = require('./routes/trips');
 
