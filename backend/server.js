@@ -24,16 +24,9 @@ mongoose.connect(mongoUri)
   .catch((err) => console.error('MongoDB connection error:', err));
 
 // Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../build')));
-  app.use((req, res) => {
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-  });
-} else {
   app.get('/', (req, res) => {
     res.send('AI Travel Planner API is running...');
   });
-}
 
 // Global Error Handler
 app.use((err, req, res, next) => {
