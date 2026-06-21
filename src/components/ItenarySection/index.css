@@ -336,3 +336,16 @@
         align-items: flex-start;
     }
 }
+.print-only {
+  display: none;
+}
+
+@media print {
+  .print-only {
+    display: block;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
