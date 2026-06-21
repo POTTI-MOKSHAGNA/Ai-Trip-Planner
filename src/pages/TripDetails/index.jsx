@@ -9,6 +9,7 @@ import HotelSelection from '../../components/HotelSelection';
 import BudgetSection from '../../components/BudgetSection';
 import Expensetracker from '../../components/ExpenseTracker';
 import RegenerateDayModal from '../../components/RegenerateDayModal';
+import './index.css'
 
 const TripDetails = () => {
   const { id } = useParams();
@@ -276,14 +277,7 @@ const TripDetails = () => {
   if (loading) {
     return (
       <div className="dashboard-container">
-        <header className="navbar">
-          <div className="navbar-brand">
-            <span className="navbar-brand-link">✈️ TravelAgent AI</span>
-          </div>
-          <button className="btn-logout" onClick={handleLogout}>
-             Log out
-          </button>
-        </header>
+        <Navbar handleLogout={handleLogout} />
         <main className="dashboard-main">
           <div className="state-container loading-state">
             <div className="spinner"></div>
@@ -309,7 +303,7 @@ const TripDetails = () => {
           <div className="state-container error-state">
             <h2>Trip Plan Not Found</h2>
             <p className="error-text">{error || 'This travel plan does not exist or you do not have permission to view it.'}</p>
-            <Link to="/" className="btn-back" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '12px 20px', background: 'var(--accent-gradient)', color: '#fff', borderRadius: 'var(--border-radius)', textDecoration: 'none', fontWeight: '600', marginTop: '20px' }}>
+            <Link to="/" className="btn-back">
                 Back to Dashboard
             </Link>
           </div>
@@ -325,12 +319,12 @@ const TripDetails = () => {
       <Navbar handleLogout={handleLogout} />
 
       {/* Printable Header */}
-      <div className="print-only" style={{ display: 'none', borderBottom: '2px solid #ccc', paddingBottom: '20px', marginBottom: '30px' }}>
-        <h1 style={{ fontSize: '2.5rem', color: '#111827', margin: '0 0 10px 0' }}>{trip.destination} Travel Guide</h1>
-        <p style={{ margin: '5px 0', fontSize: '1.1rem', color: '#4b5563' }}>
+      <div className="print-only print-header">
+        <h1 className="print-title">{trip.destination} Travel Guide</h1>
+        <p className="print-meta">
           <strong>Duration:</strong> {trip.days} Days &nbsp;|&nbsp; <strong>Budget Tier:</strong> {trip.budgetType}
         </p>
-        <p style={{ margin: '5px 0', fontSize: '1.1rem', color: '#4b5563' }}>
+        <p className="print-meta">
           <strong>Interests:</strong> {trip.interests.join(', ') || 'General'}
         </p>
       </div>
@@ -338,11 +332,11 @@ const TripDetails = () => {
       {/* Main Details Wrapper */}
       <main className="dashboard-main">
         {/* Back Link & Export Controls */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '25px' }} className="no-print">
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: '500', color: 'var(--text-secondary)' }}>
+        <div className="trip-actions no-print">
+          <Link to="/" className="trip-back-link">
               Back to Dashboard
           </Link>
-          <button className="btn-copy" style={{ background: 'rgba(255, 255, 255, 0.05)', border: '1px solid var(--border-color)', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px', padding: '10px 18px', borderRadius: 'var(--border-radius)', cursor: 'pointer', transition: 'var(--transition)' }} onClick={() => window.print()}>
+          <button className="trip-print-btn">
              Print / Export PDF
           </button>
         </div>
@@ -351,7 +345,7 @@ const TripDetails = () => {
         <TripHero trip={trip} />
 
         {/* Dynamic Grid: Itinerary & Hotel Suggestions */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: '30px', alignItems: 'start', marginBottom: '35px' }} className="details-split-grid">
+        <div className="trip-details-grid">
           
           {/* 1. ITINERARY TIMELINE PANEL */}
           
@@ -379,7 +373,7 @@ const TripDetails = () => {
         </div>
 
         {/* Dynamic Grid: Estimated Budget vs. Real Expense Tracker */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '30px', alignItems: 'start' }} className="details-split-grid">
+        <div className="budget-expense-grid">
           
           {/* 3. ESTIMATED BUDGET PANEL */}
           <BudgetSection

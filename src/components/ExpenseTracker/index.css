@@ -226,13 +226,9 @@
 .expense-submit-btn {
     width: 100%;
     padding: 10px;
-
     border: none;
     border-radius: 8px;
-
     background: var(--accent-color);
-    color: #fff;
-
     font-weight: 600;
     cursor: pointer;
 }
