@@ -26,7 +26,7 @@ mongoose.connect(mongoUri)
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../build')));
-  app.get('*', (req, res) => {
+  app.use((req, res) => {
     res.sendFile(path.join(__dirname, '../build/index.html'));
   });
 } else {
