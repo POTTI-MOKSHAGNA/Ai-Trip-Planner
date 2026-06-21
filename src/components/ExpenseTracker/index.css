@@ -1,0 +1,278 @@
+.expense-total {
+    text-align: right;
+}
+
+.expense-total-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.expense-total-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 4px 0 0;
+}
+.comparison-section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.comparison-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.comparison-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.comparison-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.comparison-category {
+    font-weight: 600;
+}
+
+.comparison-values {
+    color: var(--text-secondary);
+}
+
+.comparison-over {
+    color: var(--danger-color);
+}
+
+.comparison-under {
+    color: var(--success-color);
+}
+
+.comparison-bar {
+    position: relative;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #e5e7eb;
+}
+
+.comparison-fill {
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+.comparison-fill-over {
+    background: var(--danger-color);
+}
+
+.comparison-fill-under {
+    background: var(--success-color);
+}
+
+.comparison-target-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    background: #ffffff;
+    opacity: 0.7;
+}
+
+.comparison-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+.expense-history-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.expense-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 340px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 14px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-bg);
+}
+
+.expense-item-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 4px;
+}
+
+.expense-item-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.expense-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.expense-item-amount {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.expense-delete-btn {
+    background: transparent;
+    border: none;
+    color: #dc2626;
+    cursor: pointer;
+    padding: 4px;
+    font-size: 0.85rem;
+}
+
+.expense-delete-btn:hover {
+    opacity: 0.8;
+}
+
+.expense-empty-state {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.expense-form-card {
+    padding: 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.expense-form-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.expense-form-group {
+    margin-bottom: 12px;
+}
+
+.expense-date-group {
+    margin-bottom: 16px;
+}
+
+.expense-label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.expense-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.expense-input {
+    width: 100%;
+    padding: 8px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+
+    box-sizing: border-box;
+}
+
+.expense-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.expense-submit-btn {
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--accent-color);
+    color: #fff;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.expense-submit-btn:hover {
+    opacity: 0.9;
+}
+.expense-tracker-section {
+    padding: 30px;
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    background: var(--card-bg);
+}
+
+.expense-tracker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.expense-tracker-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.expense-tracker-subtitle {
+    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.details-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+}
+

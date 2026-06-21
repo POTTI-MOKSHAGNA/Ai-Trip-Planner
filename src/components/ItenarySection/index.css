@@ -1,0 +1,186 @@
+.itinerary-section {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.itinerary-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.itinerary-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.regen-day-btn,
+.add-activity-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.regen-day-btn {
+    color: #2563eb;
+}
+
+.day-tabs {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.day-tab {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.active-day-tab {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 23px;
+    width: 2px;
+    background: #e5e7eb;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-node {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #2563eb;
+    color: #2563eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.activity-card {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.activity-time {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    background: #f3f4f6;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.activity-title {
+    margin-bottom: 6px;
+}
+
+.activity-description {
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.delete-activity-btn {
+    border: none;
+    background: transparent;
+    color: #dc2626;
+    cursor: pointer;
+}
+
+.itinerary-empty {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.first-activity-btn {
+    margin-top: 16px;
+    padding: 10px 18px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add-activity-form {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.activity-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.activity-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.activity-cancel-btn {
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 8px;
+}
+
+.activity-submit-btn {
+    padding: 8px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+}

@@ -1,0 +1,80 @@
+.hotel-section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.hotel-section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #111827;
+}
+
+.hotel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.hotel-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px;
+    background: #fafafa;
+}
+
+.hotel-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hotel-tier {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.hotel-tier-luxury {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.hotel-tier-mid-range {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.hotel-tier-budget {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.hotel-price {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.hotel-name {
+    margin-bottom: 8px;
+    color: #111827;
+    font-size: 1.05rem;
+}
+
+.hotel-description {
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.hotel-empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px 0;
+}
