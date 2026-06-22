@@ -117,7 +117,7 @@ const Dashboard = () => {
 
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`${API_URL}/trips`, {
+      const response = await fetch(`${API_URL}/api/trips`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ const Dashboard = () => {
 
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`${API_URL}/trips/${tripId}`, {
+      const response = await fetch(`${API_URL}/api/trips/${tripId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

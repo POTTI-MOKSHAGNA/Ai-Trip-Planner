@@ -103,7 +103,7 @@ const TripDetails = () => {
   const saveItinerary = async (updatedItinerary) => {
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`${API_URL}/trips/${id}/itinerary`, {
+      const response = await fetch(`${API_URL}/api/trips/${id}/itinerary`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ const TripDetails = () => {
     setRegenerating(true);
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`${API_URL}/trips/${id}/regenerate-day`, {
+      const response = await fetch(`${API_URL}/api/trips/${id}/regenerate-day`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ const TripDetails = () => {
 
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`${API_URL}/trips/${id}/expenses`, {
+      const response = await fetch(`${API_URL}/api/trips/${id}/expenses`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -240,7 +240,7 @@ const TripDetails = () => {
 
     try {
       const token = Cookies.get('jwt_token');
-      const response = await fetch(`${API_URL}/trips/${id}/expenses/${expenseId}`, {
+      const response = await fetch(`${API_URL}/api/trips/${id}/expenses/${expenseId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
