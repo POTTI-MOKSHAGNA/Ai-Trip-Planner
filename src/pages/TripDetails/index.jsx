@@ -52,7 +52,7 @@ const TripDetails = () => {
         return;
       }
 
-      const response = await fetch(`${API_URL}/trips/${id}`, {
+      const response = await fetch(`${API_URL}/api/trips/${id}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
